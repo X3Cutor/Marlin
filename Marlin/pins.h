@@ -560,8 +560,8 @@
     #define Y_STEP_PIN         60
     #define Y_DIR_PIN          61
     #define Y_ENABLE_PIN       56
-    #define Y_MIN_PIN          14
-    #define Y_MAX_PIN          -1   //15
+    #define Y_MIN_PIN          -1
+    #define Y_MAX_PIN          15
 
     #define Z_STEP_PIN         46
     #define Z_DIR_PIN          48
@@ -656,7 +656,7 @@
   #endif
 
   #if MB(RAMPS_13_EFB) || MB(RAMPS_13_EFF) || MB(AZTEEG_X3) || MB(AZTEEG_X3_PRO)
-    #define FAN_PIN            9 // (Sprinter config)
+    #define FAN_PIN            8 // (Sprinter config)
   #else
     #define FAN_PIN            4 // IO pin. Buffer needed
   #endif
@@ -769,8 +769,8 @@
       #ifdef REPRAP_DISCOUNT_SMART_CONTROLLER
         #define BEEPER 37
 
-        #define BTN_EN1 31
-        #define BTN_EN2 33
+        #define BTN_EN1 33
+        #define BTN_EN2 31
         #define BTN_ENC 35
 
         #define SDCARDDETECT 49
