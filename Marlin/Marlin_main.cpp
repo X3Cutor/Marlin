@@ -562,6 +562,17 @@ void setup()
   SERIAL_PROTOCOLLNPGM("start");
   SERIAL_ECHO_START;
 
+/*---------------MKS OLED patch_3-----------------------*/
+#if defined (MKS_OLED13_128x64_FULL_GRAPHICS_CONTROLLER)
+  pinMode(LCD_PINS_DC, OUTPUT);		  
+  pinMode(LCD_PINS_RST, OUTPUT);		
+  digitalWrite(LCD_PINS_RST  , LOW);
+  delay(1000);
+  digitalWrite(LCD_PINS_RST  , HIGH);
+#endif  
+/*---------------MKS OLED patch_3-----------------------*/  
+
+
   // Check startup - does nothing if bootloader sets MCUSR to 0
   byte mcu = MCUSR;
   if(mcu & 1) SERIAL_ECHOLNPGM(MSG_POWERUP);

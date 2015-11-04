@@ -479,7 +479,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {200.15,199.65,6400,100}  // default steps per unit for Ultimaker
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {200.15,199.65,6400,100}
 #define DEFAULT_MAX_FEEDRATE          {50, 50, 2, 50}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {200,200,50,2000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
@@ -570,6 +570,17 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // http://www.elefu.com/index.php?route=product/product&product_id=53
 // REMEMBER TO INSTALL LiquidCrystal_I2C.h in your ARDUINO library folder: https://github.com/kiyoshigawa/LiquidCrystal_I2C
 //#define RA_CONTROL_PANEL
+
+// MKS  OLED 1.3''  128x64 FULL GRAPHICS CONTROLLER
+// ==> REMEMBER TO INSTALL U8glib to your ARDUINO library folder: http://code.google.com/p/u8glib/wiki/u8glib
+#define MKS_OLED13_128x64_FULL_GRAPHICS_CONTROLLER
+
+#if defined (MKS_OLED13_128x64_FULL_GRAPHICS_CONTROLLER)
+	#define DOGLCD
+	#define U8GLIB_SH1106
+	#define REPRAP_DISCOUNT_SMART_CONTROLLER
+	#define NEWPANEL
+#endif
 
 //automatic expansion
 #if defined (MAKRPANEL)
