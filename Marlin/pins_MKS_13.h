@@ -134,3 +134,26 @@
   #define STAT_LED_BLUE_PIN 17
 
 #endif
+
+#if ENABLED(MKS_SPI_SH1106_OLED)
+  #undef BTN_EN1
+  #undef BTN_EN2
+  #undef BTN_ENC
+  #undef DOGLCD_A0
+  #undef DOGLCD_CS
+  #undef BEEPER_PIN
+  #undef SD_DETECT_PIN
+  #undef KILL_PIN
+
+  #define LCD_PINS_RS  27
+
+  #define BEEPER_PIN 37
+  #define BTN_EN1 33
+  #define BTN_EN2 31
+  #define BTN_ENC 35
+
+  #define DOGLCD_CS 16
+  #define DOGLCD_A0 25
+  #define DOGLCD_MOSI 17
+  #define DOGLCD_SCK 23
+#endif

@@ -75,6 +75,12 @@
     #define REVERSE_MENU_DIRECTION
   #endif
 
+  #if ENABLED(MKS_SPI_SH1106_OLED)
+    #define U8GLIB_SH1106
+    #define NEWPANEL
+    #define REVERSE_ENCODER_DIRECTION
+    #define REVERSE_MENU_DIRECTION  
+  #endif
 
   // Generic support for SSD1306 / SH1106 OLED based LCDs.
   #if ENABLED(U8GLIB_SSD1306) || ENABLED(U8GLIB_SH1106)
