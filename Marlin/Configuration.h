@@ -1425,6 +1425,13 @@
 //
 //#define OLED_PANEL_TINYBOY2
 
+//
+// Makerbase MKS 0.96" / 1.3" 128x64 OLED controlled by SH1106 over SPI
+// includes a buzzer, SD slot and pushable rotary encoder and reset switch
+// https://www.makerbase.com.cn/home/producecenter
+//
+//#define MKS_SPI_SH1106_OLED
+
 //=============================================================================
 //=============================== Extra Features ==============================
 //=============================================================================
