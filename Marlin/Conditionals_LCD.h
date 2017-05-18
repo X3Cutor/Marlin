@@ -75,6 +75,7 @@
     #define REVERSE_MENU_DIRECTION
   #endif
 
+
   // Generic support for SSD1306 / SH1106 OLED based LCDs.
   #if ENABLED(U8GLIB_SSD1306) || ENABLED(U8GLIB_SH1106)
     #define ULTRA_LCD  //general LCD support, also 16x2

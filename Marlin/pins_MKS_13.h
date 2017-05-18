@@ -43,6 +43,8 @@
 
 #include "pins_RAMPS.h"
 
+#undef FAN_PIN
+
 //
 // LCD / Controller
 //
